@@ -99,7 +99,8 @@ squalid-series/
 │   │   ├── Header.astro     # Navigation with mobile menu
 │   │   ├── Hero.astro       # Hero section with contact form
 │   │   ├── Services.astro   # Services grid (responsive)
-│   │   └── Footer.astro     # Footer with contact info
+│   │   ├── Footer.astro     # Footer with contact info
+│   │   └── README.md        # Component modification guide
 │   ├── layouts/
 │   │   └── Layout.astro     # Main layout with fonts
 │   ├── pages/
@@ -188,12 +189,20 @@ Visit `http://localhost:4321` to see your site.
 2. Edit [`tailwind.config.mjs`](tailwind.config.mjs) - Update Tailwind colors
 3. See [`COLOR_SYSTEM.md`](COLOR_SYSTEM.md) for detailed guide
 
-### Modify Content
+### Modify Components
 
 - **Header**: Edit [`src/components/Header.astro`](src/components/Header.astro)
 - **Hero**: Edit [`src/components/Hero.astro`](src/components/Hero.astro)
 - **Services**: Edit [`src/components/Services.astro`](src/components/Services.astro)
 - **Footer**: Edit [`src/components/Footer.astro`](src/components/Footer.astro)
+
+**📖 For detailed component modification guide, see [`src/components/README.md`](src/components/README.md)**
+
+This guide includes:
+- How to add images to components
+- Creating content boxes
+- Modifying existing components
+- Common patterns and examples
 
 ### Add Background Images
 
@@ -210,6 +219,7 @@ See [`public/images/README.md`](public/images/README.md) for details.
 ## 📚 Documentation
 
 - **[COLOR_SYSTEM.md](COLOR_SYSTEM.md)** - Complete color system guide
+- **[src/components/README.md](src/components/README.md)** - Component modification guide
 - **[PROJECT_SETUP.md](PROJECT_SETUP.md)** - Setup and deployment guide
 - **[public/images/README.md](public/images/README.md)** - Image usage guide
 
