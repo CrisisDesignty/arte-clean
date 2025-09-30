@@ -1,0 +1,90 @@
+---
+const services = [
+	{
+		title: "Residential Cleaning",
+		description: "Keep your home spotless with our comprehensive residential cleaning services. From regular maintenance to deep cleaning, we've got you covered.",
+		icon: "home",
+		features: ["Weekly/Bi-weekly Service", "Deep Cleaning", "Move In/Out Cleaning"]
+	},
+	{
+		title: "Commercial Cleaning",
+		description: "Maintain a professional environment with our commercial cleaning solutions. Perfect for offices, retail spaces, and business facilities.",
+		icon: "building",
+		features: ["Office Cleaning", "Retail Spaces", "After-Hours Service"]
+	},
+	{
+		title: "Specialized Services",
+		description: "Expert cleaning for specific needs including carpet cleaning, window washing, and post-construction cleanup.",
+		icon: "star",
+		features: ["Carpet Cleaning", "Window Washing", "Post-Construction"]
+	}
+];
+---
+
+<section id="services" class="py-16 md:py-24 bg-white">
+	<div class="container mx-auto px-4">
+		<!-- Section Header -->
+		<div class="text-center mb-12 md:mb-16">
+			<h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-neutral-gray mb-4">
+				Our Services
+			</h2>
+			<p class="text-lg md:text-xl text-neutral-gray max-w-3xl mx-auto">
+				Professional cleaning solutions tailored to your needs. We deliver exceptional results with attention to detail.
+			</p>
+		</div>
+		
+		<!-- Services Grid - Mobile First: Stack vertically, MD+: 3 columns -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+			{services.map((service) => (
+				<div class="bg-light-gray rounded-2xl p-6 md:p-8 hover:shadow-xl transition-shadow duration-300">
+					<!-- Icon -->
+					<div class="w-16 h-16 bg-primary-blue rounded-xl flex items-center justify-center mb-6">
+						{service.icon === "home" && (
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+							</svg>
+						)}
+						{service.icon === "building" && (
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+							</svg>
+						)}
+						{service.icon === "star" && (
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+							</svg>
+						)}
+					</div>
+					
+					<!-- Content -->
+					<h3 class="text-xl md:text-2xl font-heading font-bold text-neutral-gray mb-3">
+						{service.title}
+					</h3>
+					<p class="text-neutral-gray mb-6 leading-relaxed">
+						{service.description}
+					</p>
+					
+					<!-- Features List -->
+					<ul class="space-y-3">
+						{service.features.map((feature) => (
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary-blue mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+								</svg>
+								<span class="text-neutral-gray">{feature}</span>
+							</li>
+						))}
+					</ul>
+					
+					<!-- CTA Button -->
+					<a 
+						href="#contact" 
+						class="mt-6 inline-block w-full text-center bg-white border-2 border-primary-blue text-primary-blue font-medium py-3 px-6 rounded-lg hover:bg-primary-blue hover:text-white transition-colors"
+					>
+						Learn More
+					</a>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
