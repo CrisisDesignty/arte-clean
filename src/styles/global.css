@@ -1,0 +1,138 @@
+/* Arte Clean LLC - Global Styles & Color System */
+
+/* ============================================
+   CSS VARIABLES - COLOR SYSTEM
+   ============================================
+   
+   This color system uses CSS variables for easy customization.
+   To change colors, simply update the values in the :root selector.
+   
+   Color Palette:
+   - Navy Blue (#223957): Primary brand color, headers, dark elements
+   - Sky Blue (#498fc1): Interactive elements, links, accents
+   - Coral (#ff766c): Call-to-action buttons, highlights, emphasis
+   
+   Usage in HTML/Astro:
+   - Use Tailwind classes: bg-primary, text-secondary, border-accent
+   - Or use CSS: background-color: var(--color-primary);
+============================================ */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #223957;        /* Navy Blue - Main brand color */
+  --color-primary-light: #2d4a6f;  /* Lighter shade for hover states */
+  --color-primary-dark: #1a2d45;   /* Darker shade for active states */
+  
+  /* Secondary Colors */
+  --color-secondary: #498fc1;      /* Sky Blue - Interactive elements */
+  --color-secondary-light: #5fa3d4; /* Lighter shade for hover states */
+  --color-secondary-dark: #3a7aa8;  /* Darker shade for active states */
+  
+  /* Accent Colors */
+  --color-accent: #ff766c;         /* Coral - CTAs and highlights */
+  --color-accent-light: #ff8f87;   /* Lighter shade for hover states */
+  --color-accent-dark: #e65d54;    /* Darker shade for active states */
+  
+  /* Neutral Colors */
+  --color-neutral-50: #f8f9fa;     /* Very light gray - backgrounds */
+  --color-neutral-100: #f1f3f5;    /* Light gray - subtle backgrounds */
+  --color-neutral-200: #e9ecef;    /* Gray - borders */
+  --color-neutral-300: #dee2e6;    /* Medium gray - disabled states */
+  --color-neutral-400: #ced4da;    /* Gray - placeholders */
+  --color-neutral-500: #adb5bd;    /* Medium gray - secondary text */
+  --color-neutral-600: #6c757d;    /* Dark gray - body text */
+  --color-neutral-700: #495057;    /* Darker gray - headings */
+  --color-neutral-800: #343a40;    /* Very dark gray - emphasis */
+  --color-neutral-900: #212529;    /* Almost black - high contrast */
+  
+  /* Semantic Colors */
+  --color-success: #28a745;        /* Green - success messages */
+  --color-warning: #ffc107;        /* Yellow - warnings */
+  --color-error: #dc3545;          /* Red - errors */
+  --color-info: #17a2b8;           /* Teal - information */
+  
+  /* Background Colors */
+  --color-bg-primary: #ffffff;     /* White - main background */
+  --color-bg-secondary: #f8f9fa;   /* Light gray - section backgrounds */
+  --color-bg-dark: #223957;        /* Navy - dark sections */
+  
+  /* Text Colors */
+  --color-text-primary: #212529;   /* Almost black - main text */
+  --color-text-secondary: #6c757d; /* Gray - secondary text */
+  --color-text-light: #ffffff;     /* White - text on dark backgrounds */
+  --color-text-muted: #adb5bd;     /* Light gray - muted text */
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Color utilities that can be used alongside Tailwind */
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-accent { color: var(--color-accent) !important; }
+
+.bg-primary { background-color: var(--color-primary) !important; }
+.bg-secondary { background-color: var(--color-secondary) !important; }
+.bg-accent { background-color: var(--color-accent) !important; }
+
+.border-primary { border-color: var(--color-primary) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+.border-accent { border-color: var(--color-accent) !important; }
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+/* ============================================
+   FOCUS STATES (Accessibility)
+   ============================================ */
+
+*:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SELECTION STYLES
+   ============================================ */
+
+::selection {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--color-secondary);
+  color: white;
+}
